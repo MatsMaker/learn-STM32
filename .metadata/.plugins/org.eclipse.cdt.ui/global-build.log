@@ -1,0 +1,12 @@
+12:07:02 **** Build of configuration Debug for project HellowWorld ****
+make all 
+Building file: ../src/HellowWorld.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HellowWorld.d" -MT"src/HellowWorld.o" -o "src/HellowWorld.o" "../src/HellowWorld.cpp"
+Finished building: ../src/HellowWorld.cpp
+ 
+Building target: HellowWorld
+Invoking: GCC C++ Linker
+g++  -o "HellowWorld" ./src/HellowWorld.o   
+Finished building target: HellowWorld
+ 

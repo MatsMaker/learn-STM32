@@ -1,0 +1,10 @@
+00:47:21 **** Incremental Build of configuration Debug for project usb_virtual_com_port ****
+make -j20 all 
+arm-none-eabi-size  usb_virtual_com_port.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29432	    380	   6116	  35928	   8c58	usb_virtual_com_port.elf
+Finished building: default.size.stdout
+ 
+
+00:47:21 Build Finished. 0 errors, 0 warnings. (took 150ms)
+

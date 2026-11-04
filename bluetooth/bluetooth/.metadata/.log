@@ -1,0 +1,39 @@
+!SESSION 2026-11-01 21:33:29.163 -----------------------------------------------
+eclipse.buildId=Version 2.2.0
+java.version=21.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-01 21:33:36.157
+!MESSAGE Log4j2 initialized with config file /home/mats/Projects/STM32Cube/bluetooth/bluetooth/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-01 21:33:37.605
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-11-01 21:33:46.737 -----------------------------------------------
+eclipse.buildId=Version 2.2.0
+java.version=21.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-01 21:34:13.718
+!MESSAGE Log4j2 initialized with config file /home/mats/Projects/STM32Cube/bluetooth/bluetooth/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-01 21:34:15.890
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-11-01 21:36:53.639 -----------------------------------------------
+eclipse.buildId=Version 2.2.0
+java.version=21.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-01 21:37:16.889
+!MESSAGE Log4j2 initialized with config file /home/mats/Projects/STM32Cube/bluetooth/bluetooth/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-01 21:37:18.472
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-11-01 21:38:45.799
+!MESSAGE Indexed 'lesson1' (17 sources, 104 headers) in 1.17 sec: 7,013 declarations; 25,042 references; 2 unresolved inclusions; 36 syntax errors; 186 unresolved names (0.58%)

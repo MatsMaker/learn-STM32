@@ -1,0 +1,10 @@
+15:40:58 **** Incremental Build of configuration Debug for project mimic_USB-TTL ****
+make -j20 all 
+arm-none-eabi-size  mimic_USB-TTL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34588	    460	   6516	  41564	   a25c	mimic_USB-TTL.elf
+Finished building: default.size.stdout
+ 
+
+15:40:58 Build Finished. 0 errors, 0 warnings. (took 128ms)
+

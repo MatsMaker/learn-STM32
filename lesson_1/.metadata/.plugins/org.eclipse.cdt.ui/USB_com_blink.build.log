@@ -1,0 +1,10 @@
+16:02:32 **** Incremental Build of configuration Debug for project USB_com_blink ****
+make -j20 all 
+arm-none-eabi-size  USB_com_blink.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	    380	   7140	  38624	   96e0	USB_com_blink.elf
+Finished building: default.size.stdout
+ 
+
+16:02:32 Build Finished. 0 errors, 0 warnings. (took 72ms)
+

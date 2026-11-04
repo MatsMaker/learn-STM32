@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="java.lang.Class">
+		<item key="replaceBarOpen" value="false"/>
+		<list key="findhistory">
+			<item value="CDC_Receive_FS"/>
+			<item value="return USBD_OK"/>
+			<item value="user code begin"/>
+			<item value="GPIO_InitStruct.Pin = "/>
+			<item value="APB1CLKDivider"/>
+			<item value="SYSCLKSource"/>
+			<item value="PLLMUL"/>
+			<item value="RCC_PLLMUL_9"/>
+			<item value="RCC_SYSCLK_SOURCE_PLLCLK"/>
+			<item value="9600"/>
+			<item value="Serial"/>
+			<item value="MX_USB_DEVICE_Init"/>
+		</list>
+	</section>
+</section>
