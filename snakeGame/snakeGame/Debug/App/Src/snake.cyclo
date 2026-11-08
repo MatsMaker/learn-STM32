@@ -1,0 +1,12 @@
+../App/Src/snake.c:40:17:Rand	1
+../App/Src/snake.c:46:14:Seg	1
+../App/Src/snake.c:51:13:OnSnake	4
+../App/Src/snake.c:63:13:PlaceFood	2
+../App/Src/snake.c:71:13:Reset	2
+../App/Src/snake.c:88:13:ReadDirection	7
+../App/Src/snake.c:108:13:Step	16
+../App/Src/snake.c:149:13:DrawCell	2
+../App/Src/snake.c:159:13:DrawGame	2
+../App/Src/snake.c:176:13:DrawText	1
+../App/Src/snake.c:194:6:Snake_Init	1
+../App/Src/snake.c:200:6:Snake_Process	10

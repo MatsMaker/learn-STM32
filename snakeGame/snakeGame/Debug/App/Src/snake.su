@@ -1,0 +1,12 @@
+../App/Src/snake.c:40:17:Rand	4	static
+../App/Src/snake.c:46:14:Seg	24	static
+../App/Src/snake.c:51:13:OnSnake	24	static
+../App/Src/snake.c:63:13:PlaceFood	8	static
+../App/Src/snake.c:71:13:Reset	16	static
+../App/Src/snake.c:88:13:ReadDirection	40	static
+../App/Src/snake.c:108:13:Step	16	static
+../App/Src/snake.c:149:13:DrawCell	40	static
+../App/Src/snake.c:159:13:DrawGame	56	static
+../App/Src/snake.c:176:13:DrawText	48	static
+../App/Src/snake.c:194:6:Snake_Init	8	static
+../App/Src/snake.c:200:6:Snake_Process	48	static

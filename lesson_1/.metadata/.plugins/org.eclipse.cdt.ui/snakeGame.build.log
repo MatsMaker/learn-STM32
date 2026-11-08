@@ -1,0 +1,17 @@
+18:34:43 **** Incremental Build of configuration Debug for project snakeGame ****
+make -j20 all 
+arm-none-eabi-gcc "../App/Src/snake.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"/home/mats/Projects/STM32Cube/snakeGame/snakeGame/Lib/stm32-ssd1306-master/ssd1306" -I"/home/mats/Projects/STM32Cube/snakeGame/snakeGame/App/Inc" -I"/home/mats/Projects/STM32Cube/snakeGame/snakeGame/App/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"App/Src/snake.d" -MT"App/Src/snake.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "App/Src/snake.o"
+arm-none-eabi-gcc -o "snakeGame.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mats/Projects/STM32Cube/snakeGame/snakeGame/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="snakeGame.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: snakeGame.elf
+ 
+arm-none-eabi-size  snakeGame.elf 
+arm-none-eabi-objdump -h -S snakeGame.elf  > "snakeGame.list"
+   text	   data	    bss	    dec	    hex	filename
+  24388	     96	   4128	  28612	   6fc4	snakeGame.elf
+Finished building: default.size.stdout
+ 
+Finished building: snakeGame.list
+ 
+
+18:34:43 Build Finished. 0 errors, 0 warnings. (took 227ms)
+

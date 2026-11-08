@@ -3,6 +3,8 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
+			<item value="SSD1306_CONF_H"/>
+			<item value="HAL_ADC_Start_DMA"/>
 			<item value="__io_putchar"/>
 			<item value="while"/>
 			<item value="CDC_Receive_FS"/>
@@ -16,7 +18,6 @@
 			<item value="RCC_SYSCLK_SOURCE_PLLCLK"/>
 			<item value="9600"/>
 			<item value="Serial"/>
-			<item value="MX_USB_DEVICE_Init"/>
 		</list>
 	</section>
 </section>
