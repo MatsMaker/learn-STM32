@@ -1,0 +1,5 @@
+../App/Src/joystick.c:25:17:Average	2
+../App/Src/joystick.c:35:16:Map	6
+../App/Src/joystick.c:51:6:Joystick_Init	2
+../App/Src/joystick.c:69:6:Joystick_Update	3
+../App/Src/joystick.c:92:23:Joystick_Get	1

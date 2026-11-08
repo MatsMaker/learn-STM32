@@ -1,2 +1,5 @@
 1794131600696	Rename resource 'Include'
 1794131802174	Rename resource 'ssd1306_conf_template.h'
+1794142335613	Rename resource 'Middlewares'
+1794142617044	Move 'ssd1306_conf.h' to 'Inc'
+1794142648721	Rename resource 'SSD1306'

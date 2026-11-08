@@ -21,9 +21,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
 #include "ssd1306.h"
-#include "ssd1306_fonts.h"
+#include "joystick.h"
+#include "oled_display.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,7 +33,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define ADC_CHANNELS 2
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -66,11 +66,6 @@ static void MX_I2C1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int __io_putchar (int ch)
-{
-	ITM_SendChar(ch);
-	return ch;
-}
 /* USER CODE END 0 */
 
 /**
@@ -89,7 +84,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  uint16_t VR[ADC_CHANNELS];
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -106,27 +101,21 @@ int main(void)
   MX_ADC1_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  ssd1306_Init();
-//  ssd1306_Fill(Black);
-//  ssd1306_SetCursor(0, 0);
-//  ssd1306_WriteString("Hello", Font_11x18, White);
-  ssd1306_UpdateScreen();
+  OLED_Display_Init();
+  const Joystick_State *joy;
+  Joystick_Init();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  char buf[16];
   while (1)
   {
-	  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)VR, ADC_CHANNELS);
-	  printf("Hello from STM32 over SWV!\r\n");
-	  HAL_Delay(1000);
-	  printf("Tick: %d\r\n", (int)VR[1]);
-
-	  sprintf(buf, "%u", VR[0]);
-	  ssd1306_SetCursor(0, 0);
-	  ssd1306_WriteString(buf, Font_11x18, White);
-	  ssd1306_UpdateScreen();
+	  Joystick_Update();
+	  joy = Joystick_Get();
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1,
+	                    joy->pressed ? GPIO_PIN_SET : GPIO_PIN_RESET);
+	  OLED_Display_Joystick(joy);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -225,6 +214,7 @@ static void MX_ADC1_Init(void)
   /** Configure Regular Channel
   */
   sConfig.Rank = ADC_REGULAR_RANK_2;
+  sConfig.Channel = ADC_CHANNEL_9;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -348,7 +338,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : JOY_SW_Pin */
   GPIO_InitStruct.Pin = JOY_SW_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(JOY_SW_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */

@@ -25,10 +25,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- /home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Drivers/SSD1306/Inc/ssd1306.h \
- /home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Drivers/SSD1306/Inc/ssd1306_conf.h \
- /home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Drivers/SSD1306/Inc/ssd1306_fonts.h \
- /home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Drivers/SSD1306/Inc/ssd1306.h
+ /home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Lib/stm32-ssd1306-master/ssd1306/ssd1306.h \
+ /home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App/Inc/ssd1306_conf.h \
+ /home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App/Inc/joystick.h \
+ /home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App/Inc/oled_display.h \
+ /home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App/Inc/joystick.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -56,7 +57,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
-/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Drivers/SSD1306/Inc/ssd1306.h:
-/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Drivers/SSD1306/Inc/ssd1306_conf.h:
-/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Drivers/SSD1306/Inc/ssd1306_fonts.h:
-/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Drivers/SSD1306/Inc/ssd1306.h:
+/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Lib/stm32-ssd1306-master/ssd1306/ssd1306.h:
+/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App/Inc/ssd1306_conf.h:
+/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App/Inc/joystick.h:
+/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App/Inc/oled_display.h:
+/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App/Inc/joystick.h:

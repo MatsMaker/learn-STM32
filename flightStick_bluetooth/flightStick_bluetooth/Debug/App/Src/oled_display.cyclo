@@ -1,0 +1,2 @@
+../App/Src/oled_display.c:7:6:OLED_Display_Init	1
+../App/Src/oled_display.c:12:6:OLED_Display_Joystick	2

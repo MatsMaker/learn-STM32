@@ -619,3 +619,13 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-10-22 12:56:58.622
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-11-08 15:25:12.934 -----------------------------------------------
+eclipse.buildId=Version 2.2.0
+java.version=21.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -import flightStick_bluetooth/flightStick_bluetooth -build flightStick_bluetooth/Debug
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data /home/mats/Projects/STM32Cube -import flightStick_bluetooth/flightStick_bluetooth -build flightStick_bluetooth/Debug
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-11-08 15:25:16.870
+!MESSAGE Indexed 'flightStick_bluetooth' (25 sources, 122 headers) in 1.57 sec: 10,414 declarations; 51,553 references; 2 unresolved inclusions; 36 syntax errors; 186 unresolved names (0.3%)

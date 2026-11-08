@@ -16,7 +16,7 @@ S_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Startup/%.o: ../Core/Startup/%.s Core/Startup/subdir.mk
-	arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -I"/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Drivers/SSD1306/Inc" -I"/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Drivers/SSD1306/Src" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -I"/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/Lib/stm32-ssd1306-master/ssd1306" -I"/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App" -I"/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App/Inc" -I"/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth/App/Src" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
 
 clean: clean-Core-2f-Startup
 

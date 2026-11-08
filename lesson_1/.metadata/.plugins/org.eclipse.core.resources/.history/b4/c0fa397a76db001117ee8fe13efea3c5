@@ -1,0 +1,64 @@
+#include "joystick.h"
+#include "main.h"
+
+extern ADC_HandleTypeDef hadc1;
+
+#define ADC_SAMPLES     8
+#define DEADZONE        5
+
+/* Калібрування: заміряйте крайні значення для кожної осі */
+#define X_MIN           50
+#define X_MAX           4000
+#define Y_MIN           50
+#define Y_MAX           4000
+
+static uint16_t x_center;
+static uint16_t y_center;
+
+static uint16_t ReadChannel(uint32_t channel)
+{
+    uint32_t sum = 0;
+    for (uint8_t i = 0; i < ADC_SAMPLES; i++)
+    {
+        HAL_ADC_Start(&hadc1);
+        if (HAL_ADC_PollForConversion(&hadc1, 10) == HAL_OK)
+        {
+            sum += HAL_ADC_GetValue(&hadc1);
+        }
+        HAL_ADC_Stop(&hadc1);
+    }
+    return (uint16_t)(sum / ADC_SAMPLES);
+}
+
+static int32_t Map(uint16_t raw, uint16_t min, uint16_t center, uint16_t max)
+{
+    int32_t v;
+
+    if (raw >= center)
+        v = (int32_t)(raw - center) * 100 / (int32_t)(max - center);
+    else
+        v = -(int32_t)(center - raw) * 100 / (int32_t)(center - min);
+
+    if (v > 100)  v = 100;
+    if (v < -100) v = -100;
+    if (v > -DEADZONE && v < DEADZONE) v = 0;
+
+    return v;
+}
+
+void Joystick_Init(void)
+{
+    HAL_ADCEx_Calibration_Start(&hadc1);
+    HAL_Delay(100);
+    x_center = ReadChannel(ADC_CHANNEL_0);
+    y_center = ReadChannel(ADC_CHANNEL_1);
+}
+
+void Joystick_Read(Joystick_State *state)
+{
+    state->x_raw = ReadChannel(ADC_CHANNEL_0);
+    state->y_raw = ReadChannel(ADC_CHANNEL_1);
+    state->x = Map(state->x_raw, X_MIN, x_center, X_MAX);
+    state->y = Map(state->y_raw, Y_MIN, y_center, Y_MAX);
+    state->pressed = (HAL_GPIO_ReadPin(JOY_SW_GPIO_Port, JOY_SW_Pin) == GPIO_PIN_RESET);
+}

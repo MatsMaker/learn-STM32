@@ -1,0 +1,21 @@
+#include "debug_uart.h"
+#include "main.h"
+#include <stdio.h>
+#include <string.h>
+
+extern UART_HandleTypeDef huart1;
+
+static void Send(const char *s)
+{
+    HAL_UART_Transmit(&huart1, (uint8_t *)s, strlen(s), 100);
+}
+
+void DebugUART_PrintJoystick(const Joystick_State *state)
+{
+    char buf[80];
+    snprintf(buf, sizeof(buf),
+             "X_raw:%4u Y_raw:%4u | X:%4ld Y:%4ld BTN:%d\r\n",
+             state->x_raw, state->y_raw,
+             (long)state->x, (long)state->y, state->pressed);
+    Send(buf);
+}
