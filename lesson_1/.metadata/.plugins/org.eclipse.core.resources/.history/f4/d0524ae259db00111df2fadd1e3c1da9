@@ -1,0 +1,12 @@
+/*
+ * ssd1306_conf.h
+ *
+ *  Created on: Nov 8, 2026
+ *      Author: mats
+ */
+
+#include "stm32f1xx_hal.h"
+
+
+
+#endif /* INC_SSD1306_CONF_H_ */

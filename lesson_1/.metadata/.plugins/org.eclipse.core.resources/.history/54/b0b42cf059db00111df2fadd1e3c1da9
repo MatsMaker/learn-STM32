@@ -1,0 +1,13 @@
+/*
+ * ssd1306_conf.h
+ *
+ *  Created on: Nov 8, 2026
+ *      Author: mats
+ */
+
+#ifndef INC_SSD1306_CONF_H_
+#define INC_SSD1306_CONF_H_
+
+
+
+#endif /* INC_SSD1306_CONF_H_ */

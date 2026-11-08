@@ -3,6 +3,8 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
+			<item value="__io_putchar"/>
+			<item value="while"/>
 			<item value="CDC_Receive_FS"/>
 			<item value="return USBD_OK"/>
 			<item value="user code begin"/>

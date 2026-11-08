@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth"/>
 			<item value="/home/mats/Projects/STM32Cube/mimic_USB-TTL/mimic_USB-TTL"/>
 			<item value="/home/mats/Projects/STM32Cube/usb_virtual_com_port/mimic_STM32_to_USB-TTL"/>
 			<item value="/home/mats/Projects/STM32Cube/usb_virtual_com_port/usb_virtual_com_port"/>

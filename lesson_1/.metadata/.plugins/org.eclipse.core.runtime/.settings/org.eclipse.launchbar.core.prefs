@@ -2,7 +2,7 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bluetooth  Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:mimic_USB-TTL Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:usb_virtual_com_port
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bluetooth  Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:flightStick_bluetooth Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:USB_com_blink\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:USB_com_blink\ Debug/activeLaunchTarget=null\:---
