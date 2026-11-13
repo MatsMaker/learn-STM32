@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "STM32F103C8 snakeGame",
+            "includePath": [
+                "${workspaceFolder}/snakeGame/snakeGame/Core/Inc",
+                "${workspaceFolder}/snakeGame/snakeGame/Drivers/STM32F1xx_HAL_Driver/Inc",
+                "${workspaceFolder}/snakeGame/snakeGame/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/snakeGame/snakeGame/Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+                "${workspaceFolder}/snakeGame/snakeGame/Drivers/CMSIS/Include",
+                "${workspaceFolder}/snakeGame/snakeGame/Lib/stm32-ssd1306-master/ssd1306",
+                "${workspaceFolder}/snakeGame/snakeGame/App/Inc",
+                "${workspaceFolder}/snakeGame/snakeGame/App/Src"
+            ],
+            "defines": [
+                "DEBUG",
+                "USE_HAL_DRIVER",
+                "STM32F103xB"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}

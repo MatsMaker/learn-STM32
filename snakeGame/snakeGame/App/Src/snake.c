@@ -8,7 +8,7 @@
 /* ---- Налаштування ------------------------------------------------------- */
 #define CELL            4                       /* розмір клітинки, px      */
 #define FIELD_X0        0
-#define FIELD_Y0        10                      /* зверху рядок з рахунком  */
+#define FIELD_Y0        16                      /* зверху рядок з рахунком  */
 #define COLS            (SSD1306_WIDTH / CELL)  /* 32 */
 #define ROWS            ((SSD1306_HEIGHT - FIELD_Y0) / CELL) /* 13 */
 #define MAX_LEN         (COLS * ROWS)
@@ -20,6 +20,10 @@
 #define START_PERIOD_MS 250     /* швидкість на старті                       */
 #define MIN_PERIOD_MS   80      /* максимальна швидкість                     */
 #define SPEEDUP_MS      5       /* прискорення за кожну їжу                  */
+
+/* Рекорд зберігається в останній сторінці Flash (1 КБ), зарезервованій у .ld */
+#define BEST_FLASH_ADDR 0x0800FC00u
+#define BEST_MAGIC      0xB357u
 
 typedef enum { DIR_UP, DIR_RIGHT, DIR_DOWN, DIR_LEFT } Dir;
 typedef enum { ST_START, ST_PLAY, ST_OVER } GameState;
@@ -35,6 +39,30 @@ static uint16_t  score, best;
 static uint32_t  period, last_tick;
 static bool      prev_pressed;
 static uint32_t  rnd_state = 1;
+
+/* ---- Збереження рекорду у Flash ------------------------------------------ */
+/* Формат слова: [31:16] = BEST_MAGIC, [15:0] = best */
+static uint16_t LoadBest(void)
+{
+    uint32_t w = *(volatile const uint32_t *)BEST_FLASH_ADDR;
+    return ((w >> 16) == BEST_MAGIC) ? (uint16_t)w : 0;
+}
+
+static void SaveBest(uint16_t value)
+{
+    FLASH_EraseInitTypeDef erase = {
+        .TypeErase   = FLASH_TYPEERASE_PAGES,
+        .PageAddress = BEST_FLASH_ADDR,
+        .NbPages     = 1,
+    };
+    uint32_t page_err;
+
+    HAL_FLASH_Unlock();
+    if (HAL_FLASHEx_Erase(&erase, &page_err) == HAL_OK)
+        HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, BEST_FLASH_ADDR,
+                          ((uint32_t)BEST_MAGIC << 16) | value);
+    HAL_FLASH_Lock();
+}
 
 /* ---- Утиліти ------------------------------------------------------------ */
 static uint32_t Rand(void)
@@ -140,7 +168,11 @@ static void Step(void)
     return;
 
 dead:
-    if (score > best) best = score;
+    if (score > best)
+    {
+        best = score;
+        SaveBest(best);     /* пишемо лише при новому рекорді — береже Flash */
+    }
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
     game = ST_OVER;
 }
@@ -194,6 +226,7 @@ static void DrawText(const char *title, const char *line2)
 void Snake_Init(void)
 {
     game = ST_START;
+    best = LoadBest();
     DrawText("SNAKE", "Move with joystick");
 }
 

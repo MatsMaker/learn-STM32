@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/mats/Projects/STM32Cube/doom-nano/doom-nano"/>
 			<item value="/home/mats/Projects/STM32Cube/snakeGame/snakeGame"/>
 			<item value="/home/mats/Projects/STM32Cube/flightStick_bluetooth/flightStick_bluetooth"/>
 			<item value="/home/mats/Projects/STM32Cube/mimic_USB-TTL/mimic_USB-TTL"/>
@@ -47,6 +48,11 @@
 			<item value="org.eclipse.ui.Other"/>
 		</list>
 		<section name="NewWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="0"/>
+			<item key="DIALOG_Y_ORIGIN" value="0"/>
+			<item key="DIALOG_WIDTH" value="613"/>
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
 		</section>
 	</section>
 	<section name="BasicNewProjectResourceWizard">

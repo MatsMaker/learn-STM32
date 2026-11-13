@@ -1,5 +1,16 @@
 # learn-STM32
 
+## `doom-nano`
+
+Порт гри [doom-nano](https://github.com/daveruiz/doom-nano) (3D-рушій raycasting у стилі Wolfenstein 3D / Doom) з Arduino Nano на STM32F103C8. [CubeMX | CubeIDE | HAL | C]
+
+* Картинка на OLED SSD1306 128x64 по I2C, керування аналоговим джойстиком, звук на пасивний бузер (PA1).
+* Налаштування CubeMX взяті з проекту `flightStick_bluetooth`.
+* Оригінальні файли гри — у [doom-nano/doom-nano-master](doom-nano/doom-nano-master), порт — у [doom-nano/doom-nano](doom-nano/doom-nano).
+* Опис змін, розпіновка й керування — у [doom-nano/doom-nano/README.md](doom-nano/doom-nano/README.md).
+
+![doom-nano demo](doom-pr.gif)
+
 ## Bluetooth-проєкт
 
 * Керування діодом через блютуз модуль HC-05. [CubeMX | CubeIDE | HAL | C]
